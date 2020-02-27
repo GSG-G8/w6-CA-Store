@@ -24,17 +24,20 @@ const newProductImage = document.querySelector("#new-product-image");
 const newProductBrand = document.querySelector("#new-product-brand");
 const newProductDesc = document.querySelector("#new-product-description");
 
-btnAddProduct.addEventListener("click", () => {
-    addProducts({
-        name: newProductName.value,
-        price: newProductPrice.value,
-        image: newProductImage.value,
-        brand_id: newProductBrand.value,
-        description: newProductDesc.value,
-        tags: "",
-    });
-    hidePopup();
-})
+if (btnAddProduct) {
+    btnAddProduct.addEventListener("click", () => {
+        addProducts({
+            name: newProductName.value,
+            price: newProductPrice.value,
+            image: newProductImage.value,
+            brand_id: newProductBrand.value,
+            description: newProductDesc.value,
+            tags: "",
+        });
+        hidePopup();
+    })
+}
+
 
 function creatProduct(obj) {
     const postItem = document.createElement("div");
@@ -74,4 +77,4 @@ function renderProducts(arr) {
     });
 }
 
-fetchProducts();
+document.onload = fetchProducts();
