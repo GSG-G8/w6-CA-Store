@@ -12,10 +12,10 @@ exports.list = (req, res) => {
 
 exports.add = (req, res) => {
     console.log(req.body)
-    /*addToCart()
+    addToCart(req.body.product_id, req.body.quantity)
         .then(result => {
             res.json(result.rows);
-        })*/
+        })
 }
 
 exports.delete = (req, res) => {

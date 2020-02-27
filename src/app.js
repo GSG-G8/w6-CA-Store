@@ -5,6 +5,8 @@ const router = require('./controllers')
 
 app.set('port', process.env.PORT || 1234)
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, "..", 'public')));
 
 app.use(router);
