@@ -96,7 +96,6 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("https://www.sheknows.com/wp-content/uploads/2019/04/71dg8GamRtL._UX679_.jpg?w=679");
     cursor: pointer;
 }
 
@@ -112,7 +111,9 @@ main {
 .products__item__price {
     color: #080;
 }
-.products__item__add {
+.products__item__add,
+.products__item__edit,
+.products__item__delete {
     display: block;
     font: 16px arial;
     margin: 8px auto;
@@ -125,6 +126,12 @@ main {
     border-radius: 4px;
 
     cursor: pointer;
+}
+.products__item__edit {
+    background-color: #080;
+}
+.products__item__delete {
+    background-color: #a00;
 }
 
 .popup {
@@ -229,6 +236,13 @@ main {
     cursor: pointer;
 }
 
+.main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 1800px) {
     .header,
     .products {
@@ -257,6 +271,7 @@ main {
         text-align: center;
     }
 }
+
 @media (max-width: 600px) {
     .products__item {
         flex: 0 100%;
@@ -265,4 +280,27 @@ main {
 
 textarea {
     resize: vertical;
+}
+
+.tags {
+    display: flex;
+    background-color: #daf;
+}
+
+.main__link,
+.tags__item {
+    display: block;
+    font: 16px arial;
+    padding: 8px;
+
+    color: #fff;
+    font-weight: bold;
+    background-color: #64a;
+    border-radius: 4px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.main__title {
+    font: 32px arial;
 }
