@@ -38,5 +38,5 @@ search about product
 ### As a user who is interested in selling a product ...
 
 - I can browse for available product
-- I can delete and edit a book for certain dproductates
+- I can delete and edit a product for certain dproductates
 - I can add a product to the cart
