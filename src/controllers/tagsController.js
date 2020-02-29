@@ -11,6 +11,7 @@ exports.list = (req, res) => {
 }
 
 exports.add = (req, res) => {
+    const tags = req.body.tags.split(",").filter(Boolean);
     addToCart(req.body.product_id, req.body.quantity)
         .then(result => {
             res.json(result.rows);
