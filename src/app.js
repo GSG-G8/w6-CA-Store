@@ -3,7 +3,7 @@ const { join } = require('path');
 const app = express();
 const router = require('./controllers')
 
-app.set('port', process.env.PORT || 1234)
+app.set('port', process.env.PORT || 4002)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
