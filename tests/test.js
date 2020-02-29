@@ -10,6 +10,6 @@ test("test list of all product query", () => {
     
     listProducts()
     .then(res => expect(res.rows[0].name)
-    .toEqual('asdsadsa')
+    .toEqual('product name1')
     );
 });
